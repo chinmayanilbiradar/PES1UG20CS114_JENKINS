@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-     {
+    build {
         stage('Build') {
             steps {
                 sh 'g++ -o hello task5.cpp'
