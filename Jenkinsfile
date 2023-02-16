@@ -5,12 +5,11 @@ pipeline {
           steps {
               sh 'g++ -o myProgram PES1UG20CS114.cpp'
               build job: 'PES1UG20CS114-1'
-              
           }
       }
       stage('Test') {
           steps {
-              sh './myProgram'
+              sh './:)' // intentional error, should've been `sh './myProgram'`
           }
       }
       stage('Deploy') {
