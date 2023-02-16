@@ -29,7 +29,7 @@ pipeline {
     post {
         always {
             script {
-                if (currentBuild.result == 'FAILURE') {
+                
                     echo 'pipeline failed'
                 }
             }
